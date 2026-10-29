@@ -52,17 +52,17 @@ Compatible with **Claude Code**, **Cursor**, **Windsurf**, **GitHub Copilot**, *
 
 ```bash
 # Install to current project (auto-detects Claude, Cursor, Antigravity, etc.)
-npx skills add <your-username>/senior-repo-standards
+npx skills add digitalterrene/senior-repo-standards
 
 # Or install globally across all your developer environments:
-npx skills add <your-username>/senior-repo-standards -g
+npx skills add digitalterrene/senior-repo-standards -g
 
 # Or target Claude Code specifically:
-npx skills add <your-username>/senior-repo-standards --agent claude-code
+npx skills add digitalterrene/senior-repo-standards --agent claude-code
 ```
 
 > [!NOTE]
-> When developers run `npx skills add <your-username>/senior-repo-standards`, the CLI automatically resolves the `SKILL.md` file and installs it directly into their agent configuration directory (`.claude/skills/`, `.agents/skills/`, or `.cursor/rules/`).
+> When developers run `npx skills add digitalterrene/senior-repo-standards`, the CLI automatically resolves the `SKILL.md` file and installs it directly into their agent configuration directory (`.claude/skills/`, `.agents/skills/`, or `.cursor/rules/`).
 
 ---
 
@@ -70,21 +70,30 @@ npx skills add <your-username>/senior-repo-standards --agent claude-code
 If you prefer version-controlling the skill directly within your project repository:
 ```bash
 # For Antigravity / Agentic workspaces
-git clone https://github.com/<your-username>/senior-repo-standards.git .agents/skills/senior-repo-standards
+git clone https://github.com/digitalterrene/senior-repo-standards.git .agents/skills/senior-repo-standards
 
 # For Claude Code
-git clone https://github.com/<your-username>/senior-repo-standards.git .claude/skills/senior-repo-standards
+git clone https://github.com/digitalterrene/senior-repo-standards.git .claude/skills/senior-repo-standards
 ```
 
 ### 3. Scaffold a New or Existing Repository in 5 Seconds
 Run the built-in, zero-dependency Node.js scaffolding script:
 
 ```bash
+# When installed in your project via npx skills add:
 node .agents/skills/senior-repo-standards/scripts/scaffold-repo.js \
-  --project-name="Vertueal Mail" \
-  --org-name="vertueal" \
-  --repo-name="vertueal-mail" \
-  --domain="vertueal.com"
+  --project-name="Enterprise Platform" \
+  --org-name="acme-corp" \
+  --repo-name="platform-core" \
+  --domain="example.com"
+
+# Or when running directly inside this repository:
+node scripts/scaffold-repo.js \
+  --project-name="Enterprise Platform" \
+  --org-name="acme-corp" \
+  --repo-name="platform-core" \
+  --domain="example.com" \
+  --target-dir="../your-target-project"
 ```
 
 This immediately scaffolds:

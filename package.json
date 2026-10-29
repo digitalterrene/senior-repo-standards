@@ -1,0 +1,32 @@
+{
+  "name": "senior-repo-standards",
+  "version": "1.0.0",
+  "description": "Production-grade repository standards, documentation blueprint, and git hygiene skill for software teams and AI agents.",
+  "main": "scripts/scaffold-repo.js",
+  "bin": {
+    "scaffold-repo": "./scripts/scaffold-repo.js",
+    "audit-hygiene": "./scripts/audit-hygiene.js"
+  },
+  "scripts": {
+    "scaffold": "node scripts/scaffold-repo.js",
+    "audit": "node scripts/audit-hygiene.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-skills",
+    "antigravity",
+    "agent-skill",
+    "git-standards",
+    "conventional-commits",
+    "documentation",
+    "adr",
+    "repo-hygiene",
+    "best-practices"
+  ],
+  "author": "Digital Terrene & Contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalterrene/senior-repo-standards.git"
+  },
+  "license": "MIT"
+}

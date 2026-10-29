@@ -12,6 +12,8 @@
     "audit": "node scripts/audit-hygiene.js"
   },
   "keywords": [
+    "claude",
+    "claude-skills",
     "antigravity",
     "agent-skill",
     "git-standards",
@@ -21,6 +23,10 @@
     "repo-hygiene",
     "best-practices"
   ],
-  "author": "Vertueal & Contributors",
+  "author": "Digital Terrene & Contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalterrene/senior-repo-standards.git"
+  },
   "license": "MIT"
 }
