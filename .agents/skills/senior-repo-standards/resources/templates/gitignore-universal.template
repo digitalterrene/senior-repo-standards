@@ -1,0 +1,124 @@
+# ==============================================================================
+# SENIOR REPO STANDARDS: UNIVERSAL PRODUCTION .GITIGNORE
+# Hardened against credential leaks, cache bloat, runtime dumps, and OS noise.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. CREDENTIALS, SECRETS & ENVIRONMENT FILES (ZERO TOLERANCE)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+*credentials*.json
+*token*.json
+serviceAccountKey.json
+gcloud-key*.json
+.aws/
+.npmrc
+.yarnrc
+
+# ------------------------------------------------------------------------------
+# 2. RUNTIME LOGS, HEAP DUMPS & DIAGNOSTICS
+# ------------------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+core
+*.core
+*.heapdump
+*.heapsnapshot
+folders*.txt
+diag*.txt
+api_logs*.txt
+*.pid
+*.seed
+
+# ------------------------------------------------------------------------------
+# 3. DEPENDENCY & PACKAGE MANAGER DIRECTORIES
+# ------------------------------------------------------------------------------
+node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+vendor/
+
+# ------------------------------------------------------------------------------
+# 4. BUILD ARTIFACTS, BUNDLES & CACHES
+# ------------------------------------------------------------------------------
+dist/
+build/
+out/
+bin/
+obj/
+.next/
+.nuxt/
+.turbo/
+.cache/
+.parcel-cache/
+.svelte-kit/
+.astro/
+.output/
+ts-node/
+*.tsbuildinfo
+
+# ------------------------------------------------------------------------------
+# 5. MOBILE & NATIVE COMPILATION (REACT NATIVE / EXPO / ANDROID / IOS)
+# ------------------------------------------------------------------------------
+.expo/
+.expo-shared/
+android/app/build/
+android/.gradle/
+ios/Pods/
+ios/build/
+*.xcworkspace
+*.xcuserdata
+
+# ------------------------------------------------------------------------------
+# 6. TESTING & CODE COVERAGE
+# ------------------------------------------------------------------------------
+coverage/
+.nyc_output/
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+test-results/
+
+# ------------------------------------------------------------------------------
+# 7. OPERATING SYSTEM ARTIFACTS
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------------------------
+# 8. IDE & CODE EDITOR ARTIFACTS
+# ------------------------------------------------------------------------------
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
